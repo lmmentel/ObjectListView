@@ -2234,7 +2234,8 @@ class AbstractVirtualObjectListView(ObjectListView):
         """
         # We can only refresh everything
         self.lastGetObjectIndex = -1
-        self.RefreshItems(0, self.GetItemCount()-1)
+        if self.GetItemCount() > 0:
+            self.RefreshItems(0, self.GetItemCount()-1)
         #self.Refresh()
 
 
@@ -2496,7 +2497,8 @@ class FastObjectListView(AbstractVirtualObjectListView):
                 if idx != -1:
                     self.RefreshItem(idx)
         else:
-            self.RefreshItems(0, self.GetItemCount() - 1)
+            if self.GetItemCount() > 0:
+                self.RefreshItems(0, self.GetItemCount() - 1)
 
     #----------------------------------------------------------------------------
     #  Accessing
