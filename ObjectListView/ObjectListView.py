@@ -1943,6 +1943,9 @@ class ObjectListView(wx.ListCtrl):
         if not self.columns[subItemIndex].isEditable:
             return
 
+        if rowIndex < 0:
+            return
+
         if self.GetObjectAt(rowIndex) is None:
             return
 

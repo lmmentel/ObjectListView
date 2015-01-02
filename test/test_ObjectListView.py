@@ -41,7 +41,7 @@ class TestObjectListView(unittest.TestCase):
         ]
 
     def setUp(self):
-        self.objectListView.ClearAll()
+        #self.objectListView.ClearAll()
         self.objectListView.SetColumns(self.personColumns)
         self.objectListView.SetObjects(self.persons)
 
